@@ -105,20 +105,20 @@
                     </div>
                     <div class="col-md-3">
                         <div class="player-select-section">
-                            <h3 class="text-center">Selected - V</h3>
+                            <h3 class="text-center">Selected - Players</h3>
                             <ol id="player-select">
                                 
                             </ol>
                         </div>
                         <div class="budget-section">
                             <h3 class="text-center">Budget</h3>
-                            <p>Per Player : <input type="text"></p>
-                            <button class="btn-link">Calculate</button>
-                            <p>Player Expenses: <span>00</span></p>
-                            <p>Manager : <input type="text"></p>
-                            <p>Coach : <input type="text"></p>
-                            <button class="btn-link">Calculate Total</button>
-                            <p>Total: <span>00</span></p>
+                            <p>Per Player : <input  id="per-player-input" type="text"></p>
+                            <button id="calculate-btn" class="btn-link">Calculate</button>
+                            <p>Player Expenses: <span id="player-expenses">00</span></p>
+                            <p>Manager : <input id="manager-fee"  type="text"></p>
+                            <p>Coach : <input id="coach-fee" type="text"></p>
+                            <button id="calculate-total-btn" class="btn-link">Calculate Total</button>
+                            <p>Total: <span id="total-amount">00</span></p>
                         </div>
                     </div>
                 </div>
