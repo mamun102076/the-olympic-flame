@@ -12,6 +12,8 @@ for(const i of playerList){
             alert('Not more than five')
         }else{
             playerSelect.appendChild(li)
+            event.target.setAttribute('disabled',true)
+            event.target.style.backgroundColor = 'lightsteelblue'
         }
     })
 }
