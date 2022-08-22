@@ -13,16 +13,24 @@ for(const i of playerList){
         }else{
             playerSelect.appendChild(li)
             event.target.setAttribute('disabled',true)
-            event.target.style.backgroundColor = 'lightBlue'
+            event.target.style.backgroundColor = 'lightsteelblue'
         }
     })
 }
 
 document.getElementById('calculate-btn').addEventListener('click',function () {
     perPlayerInput = commonInput('per-player-input')
+    
 
     listItem = document.querySelectorAll('li') 
-    perPlayer = perPlayerInput * listItem.length
+
+    if (listItem.length == 0) {
+        alert('Please select player')
+    }else if (isNaN(perPlayerInput)) {
+        alert('Please input value')
+    }else{
+        perPlayer = perPlayerInput * listItem.length
+    }
 
     playerExpenses = document.getElementById('player-expenses')
     playerExpenses.innerText = perPlayer
@@ -36,7 +44,14 @@ document.getElementById('calculate-total-btn').addEventListener('click',function
 
     coachFee = commonInput('coach-fee')
 
-    totalValue =  playerExpenses + managerFee + coachFee
+    if (isNaN(managerFee)) {
+        alert('Please add manager some value')
+    }else if (isNaN(coachFee)) {
+        alert('Please add coach some value')
+    }else{
+        totalValue =  playerExpenses + managerFee + coachFee
+    }
+
 
     totalAmount = document.getElementById('total-amount')
     totalAmount.innerText = totalValue
