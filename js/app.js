@@ -13,18 +13,16 @@ for(const i of playerList){
         }else{
             playerSelect.appendChild(li)
             event.target.setAttribute('disabled',true)
-            event.target.style.backgroundColor = 'lightsteelblue'
+            event.target.style.backgroundColor = 'lightBlue'
         }
     })
 }
 
 document.getElementById('calculate-btn').addEventListener('click',function () {
-    perPlayerInput = document.getElementById('per-player-input')
-    perPlayerInputString = perPlayerInput.value
-    perPlayerInputValue = parseInt(perPlayerInputString)
+    perPlayerInput = commonInput('per-player-input')
 
     listItem = document.querySelectorAll('li') 
-    perPlayer = perPlayerInputValue * listItem.length
+    perPlayer = perPlayerInput * listItem.length
 
     playerExpenses = document.getElementById('player-expenses')
     playerExpenses.innerText = perPlayer
@@ -32,19 +30,13 @@ document.getElementById('calculate-btn').addEventListener('click',function () {
 })
 
 document.getElementById('calculate-total-btn').addEventListener('click',function () {
-    playerExpenses = document.getElementById('player-expenses')
-    playerExpensesString = playerExpenses.innerText
-    playerExpensesAmount = parseInt(playerExpensesString)
+    playerExpenses = commonText('player-expenses')
 
-    managerFee = document.getElementById('manager-fee')
-    managerFeeString = managerFee.value
-    managerFeeValue = parseInt(managerFeeString)
+    managerFee = commonInput('manager-fee')
 
-    coachFee = document.getElementById('coach-fee')
-    coachFeeString = coachFee.value
-    coachFeeValue = parseInt(coachFeeString)
-    
-    totalValue =  playerExpensesAmount + managerFeeValue + coachFeeValue
+    coachFee = commonInput('coach-fee')
+
+    totalValue =  playerExpenses + managerFee + coachFee
 
     totalAmount = document.getElementById('total-amount')
     totalAmount.innerText = totalValue
