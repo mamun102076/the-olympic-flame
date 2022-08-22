@@ -8,6 +8,7 @@ for(const i of playerList){
         li.innerText = text
         
         listItem = document.querySelectorAll('li')
+
         if (listItem.length==5) {
             alert('Not more than five')
         }else{
@@ -20,7 +21,6 @@ for(const i of playerList){
 
 document.getElementById('calculate-btn').addEventListener('click',function () {
     perPlayerInput = commonInput('per-player-input')
-    
 
     listItem = document.querySelectorAll('li') 
 
@@ -34,7 +34,6 @@ document.getElementById('calculate-btn').addEventListener('click',function () {
 
     playerExpenses = document.getElementById('player-expenses')
     playerExpenses.innerText = perPlayer
-
 })
 
 document.getElementById('calculate-total-btn').addEventListener('click',function () {
@@ -52,8 +51,6 @@ document.getElementById('calculate-total-btn').addEventListener('click',function
         totalValue =  playerExpenses + managerFee + coachFee
     }
 
-
     totalAmount = document.getElementById('total-amount')
     totalAmount.innerText = totalValue
-
 })

@@ -25,6 +25,9 @@
 .btn-link:hover{
     color: #fff;
 }
+.btn-link:focus{
+    color: #fff;
+}
 .single-player-item{
     margin-bottom: 20px;
 }
@@ -33,7 +36,7 @@
    width: 100%;
 }
 .budget-section p input{
-    width: 80px;
+    width: 120px;
 }
 .player-select-section{
     background-color: lightseagreen;
@@ -59,7 +62,7 @@
     font-size: 20px;
 }
 .budget-section{
-    background-color: darkslategray;
+    background-color: #073642;
     color: #fff;
     padding: 20px 10px;
 }
