@@ -29,13 +29,14 @@
     margin-bottom: 20px;
 }
 .single-player-item img{
-    width: auto;
+   height: 250px;
+   width: 100%;
 }
 .budget-section p input{
     width: 80px;
 }
 .player-select-section{
-    background-color: crimson;
+    background-color: lightseagreen;
     color: #fff;
     padding: 20px 10px;
     height: 250px;
@@ -62,7 +63,6 @@
     color: #fff;
     padding: 20px 10px;
 }
-
 .budget-section h3{
     position: relative;
     padding-bottom: 12px;

@@ -9,7 +9,7 @@ for(const i of playerList){
         
         listItem = document.querySelectorAll('li')
         if (listItem.length==5) {
-            alert('asdasdasd')
+            alert('Not more than five')
         }else{
             playerSelect.appendChild(li)
         }
